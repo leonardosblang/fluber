@@ -1,11 +1,11 @@
 class Service {
   final String isp;
-  final int id;
-  final int data_capacity;
+  final double id;
+  final double data_capacity;
   final String type_of_internet;
-  final int download_speed;
-  final int upload_speed;
-  final int price_per_month;
+  final double download_speed;
+  final double upload_speed;
+  final double price_per_month;
   final String description;
 
 

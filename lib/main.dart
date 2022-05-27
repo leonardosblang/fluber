@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'pages/services.dart';
 import 'pages/controller.dart';
 import 'pages/custom.dart';
 import 'pages/default.dart';
@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
         routes: <String, WidgetBuilder>{
           CustomPage.route: (_) => CustomPage(),
           ControllerPage.route: (_) => ControllerPage(),
+          ServicePage.route: (_) => ServicePage(),
         });
   }
 }

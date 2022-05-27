@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../pages/controller.dart';
 import '../pages/custom.dart';
 import '../pages/default.dart';
+import '../pages/services.dart';
 
 Widget _buildMenuItem(
     BuildContext context, Widget title, String routeName, String currentRoute) {
@@ -45,6 +46,12 @@ Drawer buildDrawer(BuildContext context, String currentRoute) {
           context,
           const Text('Controller'),
           ControllerPage.route,
+          currentRoute,
+        ),
+        _buildMenuItem(
+          context,
+          const Text('Service Search'),
+          ServicePage.route,
           currentRoute,
         ),
       ],
