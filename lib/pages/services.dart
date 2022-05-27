@@ -12,21 +12,21 @@ class ServicePage extends StatefulWidget {
 }
 
 class _ServicePageState extends State<ServicePage> {
-  Service? service;
-   int name = 1;
+   List<Service>? service;
+   String name = '1';
 
   ServiceRepository serviceRepo = ServiceRepository();
 
   getAlbum() async {
 
-    service = await serviceRepo.fetchServices(name);
+    service = (await serviceRepo.fetchServices(name));
     setState(() {
       service;
     });
-    print(service!.showAlbum());
+
   }
 
-  showPokemon() {
+  showService() {
     if (service != null) {
       return ServiceDisplay(service: service!);
     }
@@ -52,10 +52,7 @@ class _ServicePageState extends State<ServicePage> {
               Container(height: 20),
               TextField(
                 onChanged: (text) {
-                  print(text.runtimeType);
-                  int a = int.parse(text);
-                  print(a.runtimeType);
-                  name = a;
+                  name = text.toLowerCase();
 
 
                 },
@@ -65,7 +62,7 @@ class _ServicePageState extends State<ServicePage> {
                 ),
               ),
               Container(height: 10),
-              showPokemon(),
+              showService(),
               Container(height: 10),
               ElevatedButton(
                 onPressed: getAlbum,

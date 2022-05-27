@@ -3,15 +3,16 @@ import '../model/service_model.dart';
 import 'package:http/http.dart' as http;
 
 class ServiceRepository {
-  Future<Service> fetchServices(int id) async {
+  Future<List<Service>> fetchServices(var id) async {
     final response =
-    await http.get(Uri.parse('https://app-challenge-api.herokuapp.com/plans/$id'));
+    await http.get(Uri.parse('https://app-challenge-api.herokuapp.com/plans?state=$id'));
 
     if (response.statusCode == 200) {
-      final info = Service.fromJson(jsonDecode(response.body));
-      return info;
+      List jsonResponse = json.decode(response.body);
+      print(jsonResponse);
+      return jsonResponse.map((service) => new Service.fromJson(service)).toList();
     } else {
-      throw Exception('Failed to load album');
+      throw Exception('AAAAFailed to load album');
     }
   }
 }
