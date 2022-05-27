@@ -15,6 +15,7 @@ dependencies:
   flutter_map: ^0.13.1
   geolocator: ^7.0.3
   latlong2:
+  http:
 
 
 dev_dependencies:
