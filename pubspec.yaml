@@ -16,6 +16,7 @@ dependencies:
   geolocator: ^7.0.3
   latlong2:
   http:
+  flutter_map_marker_popup:
 
 
 dev_dependencies:

@@ -15,11 +15,11 @@ class _ServicePageState extends State<ServicePage> {
   Service? service;
    int name = 1;
 
-  PokeRepository pokeRepo = PokeRepository();
+  ServiceRepository serviceRepo = ServiceRepository();
 
   getAlbum() async {
 
-    service = await pokeRepo.fetchPokemon(name);
+    service = await serviceRepo.fetchServices(name);
     setState(() {
       service;
     });

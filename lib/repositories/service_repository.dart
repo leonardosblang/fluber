@@ -2,8 +2,8 @@ import 'dart:convert';
 import '../model/service_model.dart';
 import 'package:http/http.dart' as http;
 
-class PokeRepository {
-  Future<Service> fetchPokemon(int id) async {
+class ServiceRepository {
+  Future<Service> fetchServices(int id) async {
     final response =
     await http.get(Uri.parse('https://app-challenge-api.herokuapp.com/plans/$id'));
 
