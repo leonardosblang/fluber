@@ -30,14 +30,14 @@ class _ServicePageState extends State<ServicePage> {
     if (service != null) {
       return ServiceDisplay(service: service!);
     }
-    return const Text("isp not found");
+    return const Text("");
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('widget.title'),
+        title: Text('ISP Search'),
       ),
       drawer: buildDrawer(context, ServicePage.route),
       body: Center(
@@ -58,7 +58,7 @@ class _ServicePageState extends State<ServicePage> {
                 },
                 decoration: const InputDecoration(
                   border: OutlineInputBorder(),
-                  labelText: 'Service ID',
+                  labelText: 'Service State',
                 ),
               ),
               Container(height: 10),

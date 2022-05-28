@@ -3,6 +3,7 @@ import 'pages/services.dart';
 import 'pages/controller.dart';
 import 'pages/custom.dart';
 import 'pages/default.dart';
+import 'pages/profile.dart';
 
 void main() => runApp(MyApp());
 
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
           CustomPage.route: (_) => CustomPage(),
           ControllerPage.route: (_) => ControllerPage(),
           ServicePage.route: (_) => ServicePage(),
+          ProfilePage.route: (_) => ProfilePage(),
         });
   }
 }
