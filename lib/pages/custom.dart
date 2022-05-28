@@ -31,9 +31,10 @@ class _CustomPageState extends State<CustomPage> {
             ),
             layers: <LayerOptions>[
               TileLayerOptions(
-                urlTemplate:
-                    'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-                subdomains: <String>['a', 'b', 'c'],
+                urlTemplate: "https://api.mapbox.com/styles/v1/leolang/cl3pfvds9003a15ntosen6q7m/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoibGVvbGFuZyIsImEiOiJjbDNrZmZ4YXowZ2Q3M2RvMm5pNnIyOG1sIn0.29lhKgsL4Amabu1y5-_OuA",
+                additionalOptions: {
+                  'accessToken': 'pk.eyJ1IjoibGVvbGFuZyIsImEiOiJjbDNrZmZ4YXowZ2Q3M2RvMm5pNnIyOG1sIn0.29lhKgsL4Amabu1y5-_OuA',
+                  'id': 'mapbox.mapbox-streets-v8'},
               ),
             ],
             nonRotatedLayers: <LayerOptions>[
@@ -63,12 +64,12 @@ class _CustomPageState extends State<CustomPage> {
                               Container(
                                 decoration: BoxDecoration(
                                     shape: BoxShape.circle,
-                                    color: Colors.pink[300]!.withOpacity(0.7)),
+                                    color: Colors.green[300]!.withOpacity(0.7)),
                                 height: 40.0,
                                 width: 40.0,
                               ),
                               const Icon(
-                                Icons.location_city,
+                                Icons.person,
                                 size: 30.0,
                               ),
                             ],
@@ -90,11 +91,11 @@ class _CustomPageState extends State<CustomPage> {
     return (BuildContext context, ValueNotifier<LocationServiceStatus> status,
         Function onPressed) {
       return Align(
-        alignment: Alignment.bottomCenter,
+        alignment: Alignment.bottomRight,
         child: Padding(
-          padding: const EdgeInsets.only(bottom: 16.0),
+          padding: const EdgeInsets.only(bottom: 16.0,right: 16.0),
           child: FloatingActionButton(
-              backgroundColor: Colors.pink,
+              backgroundColor: Colors.lightGreenAccent,
               child: const Icon(
                 Icons.home,
                 color: Colors.black,

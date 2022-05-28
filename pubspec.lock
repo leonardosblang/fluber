@@ -76,6 +76,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.13.1"
+  flutter_map_marker_cluster:
+    dependency: "direct main"
+    description:
+      name: flutter_map_marker_cluster
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.4.4"
   flutter_map_marker_popup:
     dependency: "direct main"
     description:

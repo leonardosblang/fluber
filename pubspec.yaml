@@ -17,6 +17,7 @@ dependencies:
   latlong2:
   http:
   flutter_map_marker_popup:
+  flutter_map_marker_cluster:
 
 
 dev_dependencies:
