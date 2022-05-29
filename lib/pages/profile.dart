@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import '../widgets/drawer.dart';
-
+import '../repositories/installer_repository.dart';
+import '../model/installer_model.dart';
 class ProfilePage extends StatefulWidget {
   static const String route = 'profile';
   State<ProfilePage> createState() => _ProfilePageState();
+
 }
 
 
@@ -11,6 +13,10 @@ class ProfilePage extends StatefulWidget {
 
 class _ProfilePageState extends State<ProfilePage> {
   // This widget is the root of your application.
+
+
+
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

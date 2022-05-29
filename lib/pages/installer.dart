@@ -1,34 +1,34 @@
-import '../model/service_model.dart';
-import '../repositories/service_repository.dart';
+import '../model/installer_model.dart';
+import '../repositories/installer_repository.dart';
 import 'package:flutter/material.dart';
-import '../pages/service_display.dart';
+import '../pages/installer_display.dart';
 import '../widgets/drawer.dart';
 
-class ServicePage extends StatefulWidget {
-  static const String route = 'services';
+class InstallerPage extends StatefulWidget {
+  static const String route = 'installers';
 
   @override
-  State<ServicePage> createState() => _ServicePageState();
+  State<InstallerPage> createState() => _InstallerPageState();
 }
 
-class _ServicePageState extends State<ServicePage> {
-   List<Service>? service;
-   String name = '1';
+class _InstallerPageState extends State<InstallerPage> {
+  List<Installer>? installer;
+  String name = '1';
 
-  ServiceRepository serviceRepo = ServiceRepository();
+  InstallerRepository installerRepo = InstallerRepository();
 
   getAlbum() async {
 
-    service = (await serviceRepo.fetchServices(name));
+    installer = (await installerRepo.fetchInstaller(name));
     setState(() {
-      service;
+      installer;
     });
 
   }
 
-  showService() {
-    if (service != null) {
-      return ServiceDisplay(service: service!);
+  showInstaller() {
+    if (installer != null) {
+      return InstallerDisplay(installer: installer!);
     }
     return const Text("");
   }
@@ -37,16 +37,16 @@ class _ServicePageState extends State<ServicePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('ISP Search'),
+        title: Text('Installers Search'),
       ),
-      drawer: buildDrawer(context, ServicePage.route),
+      drawer: buildDrawer(context, InstallerPage.route),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(30.0),
           child: Column(
             children: [
               const Text(
-                "Serach for Plans in your Region!",
+                "Search for Installers for your Plan!",
                 style: TextStyle(fontSize: 25),
               ),
               Container(height: 20),
@@ -58,11 +58,11 @@ class _ServicePageState extends State<ServicePage> {
                 },
                 decoration: const InputDecoration(
                   border: OutlineInputBorder(),
-                  labelText: 'Plan State',
+                  labelText: 'Plan ID',
                 ),
               ),
               Container(height: 10),
-              showService(),
+              showInstaller(),
               Container(height: 10),
               ElevatedButton(
                 onPressed: getAlbum,
@@ -70,7 +70,7 @@ class _ServicePageState extends State<ServicePage> {
                   width: MediaQuery.of(context).size.width,
                   child: const Center(
                     child: Text(
-                      "Search for Internet Service Provider",
+                      "Search for Internet Installer",
                     ),
                   ),
                 ),

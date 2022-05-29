@@ -20,7 +20,7 @@ class _DefaultPageState extends State<DefaultPage> {
   late int pointIndex;
   List points = [
     LatLng(-22.112881677570375, -45.054630741304784),
-    LatLng(49.8566, 3.3522),
+    LatLng(-18.76021182506475,-51.6567536259022),
   ];
 
   @override
@@ -57,111 +57,73 @@ class _DefaultPageState extends State<DefaultPage> {
           child: Icon(Icons.location_on,color: Colors.green,size: 30.0,),
         ),
       ),
+
+
+
       Marker(
         anchorPos: AnchorPos.align(AnchorAlign.center),
         height: 30,
         width: 30,
-        point: LatLng(53.3488, -6.2613),
-        builder: (ctx) => Icon(Icons.pin_drop),
+        point: LatLng(-18.76021182506475, -51.6567536259022),
+        builder: (ctx) => Container(
+          key: Key('blue'),
+          child: Icon(Icons.location_on,color: Colors.green,size: 30.0,),
+        ),
+
       ),
+
       Marker(
         anchorPos: AnchorPos.align(AnchorAlign.center),
         height: 30,
         width: 30,
-        point: LatLng(48.8566, 2.3522),
-        builder: (ctx) => Icon(Icons.pin_drop),
+        point: LatLng(-7.580186781734245, -38.41660782388763),
+        builder: (ctx) => Container(
+          key: Key('blue'),
+          child: Icon(Icons.location_on,color: Colors.green,size: 30.0,),
+        ),
+
       ),
+
       Marker(
         anchorPos: AnchorPos.align(AnchorAlign.center),
         height: 30,
         width: 30,
-        point: LatLng(49.8566, 3.3522),
-        builder: (ctx) => Icon(Icons.pin_drop),
+        point: LatLng(-14.58073834740856, -41.1903525857145),
+        builder: (ctx) => Container(
+          key: Key('blue'),
+          child: Icon(Icons.location_on,color: Colors.green,size: 30.0,),
+        ),
+
       ),
+
       Marker(
         anchorPos: AnchorPos.align(AnchorAlign.center),
         height: 30,
         width: 30,
-        point: LatLng(49.8566, 3.3522),
-        builder: (ctx) => Icon(Icons.pin_drop),
+        point: LatLng(-16.15286554126153, -43.01295131326434),
+        builder: (ctx) => Container(
+          key: Key('blue'),
+          child: Icon(Icons.location_on,color: Colors.green,size: 30.0,),
+        ),
+
       ),
+
+
       Marker(
         anchorPos: AnchorPos.align(AnchorAlign.center),
         height: 30,
         width: 30,
-        point: LatLng(49.8566, 3.3522),
-        builder: (ctx) => Icon(Icons.pin_drop),
+        point: LatLng(-14.58073834740856,-41.1903525857145),
+        builder: (ctx) => Container(
+          key: Key('blue'),
+          child: Icon(Icons.location_on,color: Colors.green,size: 30.0,),
+        ),
+
       ),
-      Marker(
-        anchorPos: AnchorPos.align(AnchorAlign.center),
-        height: 30,
-        width: 30,
-        point: LatLng(49.8566, 3.3522),
-        builder: (ctx) => Icon(Icons.pin_drop),
-      ),
-      Marker(
-        anchorPos: AnchorPos.align(AnchorAlign.center),
-        height: 30,
-        width: 30,
-        point: LatLng(49.8566, 3.3522),
-        builder: (ctx) => Icon(Icons.pin_drop),
-      ),
-      Marker(
-        anchorPos: AnchorPos.align(AnchorAlign.center),
-        height: 30,
-        width: 30,
-        point: LatLng(49.8566, 3.3522),
-        builder: (ctx) => Icon(Icons.pin_drop),
-      ),
-      Marker(
-        anchorPos: AnchorPos.align(AnchorAlign.center),
-        height: 30,
-        width: 30,
-        point: LatLng(49.8566, 3.3522),
-        builder: (ctx) => Icon(Icons.pin_drop),
-      ),
-      Marker(
-        anchorPos: AnchorPos.align(AnchorAlign.center),
-        height: 30,
-        width: 30,
-        point: LatLng(49.8566, 3.3522),
-        builder: (ctx) => Icon(Icons.pin_drop),
-      ),
-      Marker(
-        anchorPos: AnchorPos.align(AnchorAlign.center),
-        height: 30,
-        width: 30,
-        point: LatLng(49.8566, 3.3522),
-        builder: (ctx) => Icon(Icons.pin_drop),
-      ),
-      Marker(
-        anchorPos: AnchorPos.align(AnchorAlign.center),
-        height: 30,
-        width: 30,
-        point: LatLng(49.8566, 3.3522),
-        builder: (ctx) => Icon(Icons.pin_drop),
-      ),
-      Marker(
-        anchorPos: AnchorPos.align(AnchorAlign.center),
-        height: 30,
-        width: 30,
-        point: LatLng(49.8566, 3.3522),
-        builder: (ctx) => Icon(Icons.pin_drop),
-      ),
-      Marker(
-        anchorPos: AnchorPos.align(AnchorAlign.center),
-        height: 30,
-        width: 30,
-        point: LatLng(49.8566, 3.3522),
-        builder: (ctx) => Icon(Icons.pin_drop),
-      ),
-      Marker(
-        anchorPos: AnchorPos.align(AnchorAlign.center),
-        height: 30,
-        width: 30,
-        point: LatLng(49.8566, 3.3522),
-        builder: (ctx) => Icon(Icons.pin_drop),
-      ),
+
+
+
+
     ];
 
     super.initState();
@@ -313,7 +275,7 @@ class _DefaultPageState extends State<DefaultPage> {
                         );
                       default:
                         return const Icon(
-                          Icons.location_searching,
+                          Icons.home,
                           color: Colors.white,
                         );
                     }

@@ -5,6 +5,7 @@ import '../pages/custom.dart';
 import '../pages/default.dart';
 import '../pages/services.dart';
 import '../pages/profile.dart';
+import '../pages/installer.dart';
 
 Widget _buildMenuItem(
     BuildContext context, Widget title, String routeName, String currentRoute, Icons ) {
@@ -60,6 +61,13 @@ Drawer buildDrawer(BuildContext context, String currentRoute) {
           ServicePage.route,
           currentRoute,
           Icon(Icons.search),
+        ),
+        _buildMenuItem(
+          context,
+          const Text('Installer Search'),
+          InstallerPage.route,
+          currentRoute,
+          Icon(Icons.search_outlined),
         ),
         _buildMenuItem(
           context,

@@ -27,13 +27,13 @@ class ServiceDisplay extends StatelessWidget {
         shrinkWrap: true,
         itemCount: data.length,
         itemBuilder: (context, index) {
-          return _tile(data[index].isp, data[index].description, Icons.network_check, data[index].download_speed, data[index].data_capacity, data[index].upload_speed, data[index].price_per_month,data[index].type_of_internet);
+          return _tile(data[index].isp, data[index].description, Icons.network_check, data[index].download_speed, data[index].data_capacity, data[index].upload_speed, data[index].price_per_month,data[index].type_of_internet,data[index].id);
         });
   }
 
-  ExpansionTile _tile(String title, String subtitle, IconData icon, double download_speed, double data_capacity, double upload_speed, double price_per_month, String type_of_internet) => ExpansionTile(
+  ExpansionTile _tile(String title, String subtitle, IconData icon, double download_speed, double data_capacity, double upload_speed, double price_per_month, String type_of_internet, double id) => ExpansionTile(
 
-    title: Text(title,
+    title: Text((id.toString()+' - '+title),
         style: TextStyle(
           fontWeight: FontWeight.w500,
           fontSize: 20,

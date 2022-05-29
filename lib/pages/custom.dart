@@ -97,7 +97,7 @@ class _CustomPageState extends State<CustomPage> {
           child: FloatingActionButton(
               backgroundColor: Colors.lightGreenAccent,
               child: const Icon(
-                Icons.home,
+                Icons.location_searching,
                 color: Colors.black,
               ),
               onPressed: () => onPressed()),

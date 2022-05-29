@@ -4,6 +4,7 @@ import 'pages/controller.dart';
 import 'pages/custom.dart';
 import 'pages/default.dart';
 import 'pages/profile.dart';
+import 'pages/installer.dart';
 
 void main() => runApp(MyApp());
 
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
           CustomPage.route: (_) => CustomPage(),
           ControllerPage.route: (_) => ControllerPage(),
           ServicePage.route: (_) => ServicePage(),
+          InstallerPage.route: (_) => InstallerPage(),
           ProfilePage.route: (_) => ProfilePage(),
         });
   }
