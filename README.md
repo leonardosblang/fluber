@@ -1,4 +1,4 @@
-# Inatel APP Challenge 2022
+# Fluber
 
 Fluber - O Uber em Flutter.
 
